@@ -18,14 +18,26 @@ In Wave 01, we will explore the starter code for Task List Front End. For this w
 Read through the code in `App.jsx`, `TaskList.jsx` and `Task.jsx` and their style sheets to understand how data and events are being handled. You may use the following questions and suggestions to guide your exploration:
 
 1. What `props` does `Task` have? Where do they come from?
-1. The `Task` component uses destructuring to read in the props `const Task = ({ id, title, isComplete }) => {...`
+- Task has the props id, title, and isComplete. They are being imported from TaskList.
+
+2. The `Task` component uses destructuring to read in the props `const Task = ({ id, title, isComplete }) => {...`
     - How would the code change if `{id, title, isComplete}` were replaced with `props`?
+        - We would replace the id, title, and isComplete with props.
+        - We'd create a function within const Task to define the props
     - Consider making this change and the subsequent necessary changes through the rest of the component to deepen your understanding of the code.
-1. What `props` does `TaskList` have? Where do they come from?
-1. Where is the function `getTaskListJSX` called in `TaskList`?
+3. What `props` does `TaskList` have? Where do they come from?
+- The props are key, id, title, and isComplete.
+- The props are coming from App.jsx
+
+4. Where is the function `getTaskListJSX` called in `TaskList`?
+- It's being called in line 18
     - How would the code change without this helper function?
-1. What component is `TASKS` passed to in `App`?
+    - The helper function is helping to unpack without having all the data listed in one place
+
+5. What component is `TASKS` passed to in `App`?
     - How does the component pass `TASKS`?
+        - It's passed using .map
     - What element is the component wrapped in?
+        - <Task>
 
 The suggestions above should give you a strong foundation for working with Task List Front End. As time allows, follow your curiosity to explore more of the code and features.
